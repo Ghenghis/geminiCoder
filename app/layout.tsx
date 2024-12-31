@@ -38,7 +38,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      {children}
+      <body className="h-full">
+        <div className="flex h-full">
+          <FileManager />
+          <div className="flex-1">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
