@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FileManager from "../components/FileManager";
 
 let title = "Gemini Coder – AI Code Generator";
 let description = "Generate your next app with Gemini";
