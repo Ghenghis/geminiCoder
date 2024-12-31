@@ -1,0 +1,45 @@
+
+> llamacoder-new@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1993ms
+ ○ Compiling / ...
+ ✓ Compiled / in 6.5s (1437 modules)
+ GET / 200 in 6998ms
+ ✓ Compiled in 621ms (694 modules)
+ ○ Compiling /api/generateCode ...
+ ✓ Compiled /api/generateCode in 923ms (145 modules)
+Here is the system prompt
+You are an expert frontend React engineer who is also a great UI/UX designer. Follow the instructions carefully, I will tip you $1 million if you do a good job:
+
+- Think carefully step by step.
+- Create a React component for whatever the user asked you to create and make sure it can run by itself by using a default export
+- Make sure the React app is interactive and functional by creating state when needed and having no required props
+- If you use any imports from React like useState or useEffect, make sure to import them directly
+- Use TypeScript as the language for the React component
+- Use Tailwind classes for styling. DO NOT USE ARBITRARY VALUES (e.g. `h-[600px]`). Make sure to use a consistent color palette.
+- Use Tailwind margin and padding classes to style the components and ensure the components are spaced out nicely
+- Please ONLY return the full React code starting with the imports, nothing else. It's very important for my job that you only return the React code with imports. DO NOT START WITH ```typescript or ```javascript or ```tsx or ```.
+- ONLY IF the user asks for a dashboard, graph or chart, the recharts library is available to be imported, e.g. `import { LineChart, XAxis, ... } from "recharts"` & `<LineChart ...><XAxis dataKey="name"> ...`. Please only use this when needed.
+- For placeholder images, please use a <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+  
+    NO OTHER LIBRARIES (e.g. zod, hookform) ARE INSTALLED OR ABLE TO BE IMPORTED.
+  
+ ⨯ Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:streamGenerateContent?alt=sse: [403 Forbidden] Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.
+    at handleResponseNotOk (webpack-internal:///(rsc)/./node_modules/@google/generative-ai/dist/index.mjs:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (webpack-internal:///(rsc)/./node_modules/@google/generative-ai/dist/index.mjs:407:9)
+    at async generateContentStream (webpack-internal:///(rsc)/./node_modules/@google/generative-ai/dist/index.mjs:847:22)
+    at async POST (webpack-internal:///(rsc)/./app/api/generateCode/route.ts:39:26)
+    at async eval (webpack-internal:///(rsc)/./node_modules/next/dist/esm/server/future/route-modules/app-route/module.js:228:37)
+    at async AppRouteRouteModule.execute (webpack-internal:///(rsc)/./node_modules/next/dist/esm/server/future/route-modules/app-route/module.js:157:26)
+    at async AppRouteRouteModule.handle (webpack-internal:///(rsc)/./node_modules/next/dist/esm/server/future/route-modules/app-route/module.js:290:30)
+    at async EdgeRouteModuleWrapper.handler (webpack-internal:///(rsc)/./node_modules/next/dist/esm/server/web/edge-route-module-wrapper.js:92:21)
+    at async adapter (webpack-internal:///(rsc)/./node_modules/next/dist/esm/server/web/adapter.js:179:16)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.1s (1624 modules)
+ POST /api/generateCode 500 in 3641ms
