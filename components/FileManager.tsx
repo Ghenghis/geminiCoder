@@ -1,6 +1,8 @@
 
 'use client';
 
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Download, GitHub, Upload, RefreshCw, Plus, Folder, FileText } from 'lucide-react';
 
