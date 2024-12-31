@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/logo.svg";
@@ -5,21 +6,23 @@ import GithubIcon from "./github-icon";
 
 export default function Header() {
   return (
-    <header className="relative mx-auto mt-5 flex w-full items-center justify-center px-2 pb-7 sm:px-4">
-      <Link href="/" className="absolute flex items-center gap-2">
-        <Image alt="header text" src={logo} className="h-5 w-5" />
-        <h1 className="text-xl tracking-tight">
-          <span className="text-blue-600">Gemini</span>Coder
+    <header className="relative z-10 mx-auto mt-5 flex w-full max-w-7xl items-center justify-between px-6 pb-7">
+      <Link href="/" className="flex items-center gap-3">
+        <Image alt="logo" src={logo} className="h-8 w-8" priority />
+        <h1 className="text-2xl font-bold tracking-tight">
+          <span className="text-blue-400">Gemini</span>Coder
         </h1>
       </Link>
-      <a
-        href="https://github.com/osanseviero/geminicoder"
-        target="_blank"
-        className="ml-auto hidden items-center gap-3 rounded-2xl bg-white px-6 py-2 sm:flex"
-      >
-        <GithubIcon className="h-4 w-4" />
-        <span>GitHub Repo</span>
-      </a>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://github.com/osanseviero/geminicoder"
+          target="_blank"
+          className="flex items-center gap-2 rounded-lg bg-gray-800 px-4 py-2 text-sm text-gray-300 transition hover:bg-gray-700"
+        >
+          <GithubIcon className="h-5 w-5" />
+          <span>GitHub</span>
+        </a>
+      </div>
     </header>
   );
 }
